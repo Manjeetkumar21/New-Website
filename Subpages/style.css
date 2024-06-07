@@ -1,0 +1,355 @@
+body {
+    background-color: #f8f9fa;
+}
+.jumbotron {
+    background-color: #343a40;
+    color: #fff;
+    padding: 100px 0;
+}
+.jumbotron h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.lead {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    
+    line-height: 2rem;
+    font-weight: 500;
+}
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 25px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+.features {
+    padding: 80px 0;
+  }
+  .features h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+.banner-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+    filter: drop-shadow(5px 5px 10px #0000008a);
+}
+
+
+
+/* Investment */
+
+.investment {
+    padding: 50px 0px;
+    
+}
+
+.investment h2{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+}
+
+.investment p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #666;
+    text-align: justify;
+}
+
+
+.investment .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.investment-image {
+    height: auto;
+    margin-block: 20px;
+    transition: transform 0.3s ease;
+}
+
+.investment-image:hover {
+    transform: scale(1.05);
+}
+
+/* Features */
+.feature-item {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .feature-item:hover {
+    transform: translateY(-10px);
+  }
+
+  .feature-item i {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #007bff;
+  }
+
+  .feature-item h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  .feature-item p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .feature-item ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .feature-item ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .feature-item .price {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #007bff;
+  }
+
+  .feature-item .btn-primary {
+    font-size: 16px;
+    padding: 10px 25px;
+    border-radius: 30px;
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: all 0.3s ease;
+  }
+
+  .feature-item .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+
+/* Benefits */
+  .benefits {
+    padding: 80px 0;
+}
+
+.benefits h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.benefit-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+}
+
+.benefit-card i {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.benefit-card h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.benefit-card p {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+
+/* Plans Section */
+
+
+.plans-section{
+  padding: 30px 0px;
+}
+.plans-section .card {
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.plans-section .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+.plans-section .card-header {
+  background: linear-gradient(to right, #007bff, #4c9bff);
+  color: #fff;
+  font-weight: bold;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+}
+.plans-section .card-body {
+  padding: 2rem;
+}
+
+.plans-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #333;
+  text-align: center;
+}
+.plans-section .card-title {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #007bff;
+  margin-bottom: 1.5rem;
+}
+.plans-section .card-subtitle {
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin-bottom: 2rem;
+}
+.plans-section .list-group-item {
+  font-size: 0.9rem;
+  padding: 1rem 1.5rem;
+  border-color: #e9ecef;
+}
+.plans-section .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+.plans-section .btn-primary:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+
+/* Accordian */
+
+
+.faq {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+
+.faq h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #343a40;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-item {
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.accordion-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.accordion-button {
+  font-size: 20px;
+  font-weight: bold;
+  color: #343a40;
+  transition: color 0.3s ease;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.accordion-button:hover,
+.accordion-button:focus {
+  color: #007bff;
+}
+
+.accordion-button::after {
+  content: "\f107";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  transition: transform 0.3s ease;
+}
+
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(-180deg);
+}
+
+.accordion-body {
+  color: #6c757d;
+  padding: 20px;
+  border-top: 1px solid #dee2e6;
+}
+
+.accordion-button::after, .accordion-button:not(.collapsed)::after{
+background: none;
+}
+
+
+
+@media (max-width: 768px) {
+    .investment {
+        padding: 80px 0;
+    }
+    
+    .investment h2 {
+        font-size: 2rem;
+    }
+    
+    .investment p {
+        font-size: 16px;
+    }
+    
+    .investment .btn-primary {
+        font-size: 16px;
+        padding: 10px 25px;
+    }
+
+    .accordion-header button{
+      font-size: 1rem;
+    }
+}
