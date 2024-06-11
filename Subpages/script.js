@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const nextButton = document.querySelector('.next');
     const prevButton = document.querySelector('.prev');
     let index = 0;
-    const intervalTime = 3000; // Time in milliseconds
+    const intervalTime = 3000; 
     let autoSlide;
 
     function duplicateSlides() {
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function slide() {
         index++;
-        const offset = index * -220; // Change -220 to include margin
+        const offset = index * -(track.offsetWidth / 3);
         track.style.transform = `translateX(${offset}px)`;
 
         if (index >= slides.length) {
@@ -49,9 +49,9 @@ document.addEventListener('DOMContentLoaded', function() {
         stopAutoSlide();
         index -= 2;
         if (index < -1) {
-            index = slides.length - 3;
+            index = slides.length - 4;
             track.style.transition = 'none';
-            const offset = index * -220; // Change -220 to include margin
+            const offset = index * -(track.offsetWidth / 3);
             track.style.transform = `translateX(${offset}px)`;
             setTimeout(() => {
                 track.style.transition = 'transform 0.5s ease-in-out';

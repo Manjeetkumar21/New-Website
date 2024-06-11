@@ -385,10 +385,8 @@ background: none;
   padding: 50px 0px;
 }
 
-.slider-container {
-  
+.slider-container { 
   padding-inline: 10px;
- 
   overflow: hidden;
   position: relative;
   display: flex;
@@ -407,7 +405,7 @@ background: none;
 }
 
 .image-slide {
-  min-width: 200px;
+  min-width: calc(100% / 3 - 20px);
   margin: 10px;
   transition: transform 0.3s;
 }
@@ -452,7 +450,7 @@ background: none;
   }
 
   .image-slide {
-      min-width: 150px;
+    min-width: calc(100% / 2 - 20px);
   }
 
   .btn-control {
