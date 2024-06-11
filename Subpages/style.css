@@ -1,50 +1,50 @@
 body {
-    background-color: #f8f9fa;
+  background-color: #f8f9fa;
 }
 .jumbotron {
-    background-color: #343a40;
-    color: #fff;
-    padding: 100px 0;
+  background-color: #343a40;
+  color: #fff;
+  padding: 100px 0;
 }
 .jumbotron h1 {
-    font-size: 2rem;
-    font-weight: bold;
+  font-size: 2rem;
+  font-weight: bold;
 }
 .lead {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    margin-top: 20px;
-    
-    line-height: 3rem;
-    font-weight: 500;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  margin-top: 20px;
+
+  line-height: 3rem;
+  font-weight: 500;
 }
 .btn-primary {
-    background-color: #007bff;
-    border: none;
-    border-radius: 8px;
-    padding: 10px 25px;
-    font-weight: bold;
-    transition: background-color 0.3s, transform 0.3s;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 25px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
 }
 .btn-primary:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
+  background-color: #0056b3;
+  transform: scale(1.05);
 }
 .features {
-    padding: 80px 0;
-  }
-  .features h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 40px;
-    text-align: center;
-  }
+  padding: 80px 0;
+}
+.features h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: center;
+}
 
 .banner-image {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 40px;
-    filter: drop-shadow(5px 5px 10px #0000008a);
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 40px;
+  filter: drop-shadow(5px 5px 10px #0000008a);
 }
 
 /* Button */
@@ -52,204 +52,198 @@ body {
   --color: #007bff;
   font-family: inherit;
   display: inline-block;
-  width: 8em;
   line-height: 2.5em;
   margin-top: 20px;
   position: relative;
   overflow: hidden;
   border: 2px solid var(--color);
-  transition: color .5s;
+  transition: color 0.5s;
   z-index: 1;
   font-size: 17px;
   border-radius: 6px;
   font-weight: 500;
   color: var(--color);
   background-color: white;
- }
- 
- .primary-button:before {
+  padding-inline: 1em;
+}
+
+.primary-button:before {
   content: "";
   position: absolute;
   z-index: -1;
   background: var(--color);
   height: 150px;
-  width: 200px;
+  width: 250px;
   border-radius: 50%;
- }
- 
- .primary-button:hover {
+}
+
+.primary-button:hover {
   color: #fff;
- }
- 
- .primary-button:before {
+}
+
+.primary-button:before {
   top: 100%;
   left: 100%;
-  transition: all .7s;
- }
- 
- .primary-button:hover:before {
+  transition: all 0.7s;
+}
+
+.primary-button:hover:before {
   top: -30px;
   left: -30px;
- }
- 
- .primary-button:active:before {
+}
+
+.primary-button:active:before {
   background: #0065d0;
   transition: all 0.1s ease;
- }
-
+}
 
 /* Investment */
 
 .investment {
-    padding: 50px 0px;
-    
+  padding: 50px 0px;
 }
 
-.investment h2{
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 30px;
-    color: #333;
-    text-align: center;
+.investment h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #333;
+  text-align: center;
 }
 
 .investment p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    color: #666;
-    text-align: justify;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #666;
+  text-align: justify;
 }
 
-
 .investment .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+  background-color: #0056b3;
+  border-color: #0056b3;
 }
 
 .investment-image {
-    height: auto;
-    margin-block: 20px;
-    transition: transform 0.3s ease;
+  height: auto;
+  margin-block: 20px;
+  transition: transform 0.3s ease;
 }
 
 .investment-image:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 /* Features */
 .feature-item {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 30px;
-    margin-bottom: 30px;
-    text-align: center;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-
-  .feature-item:hover {
-    transform: translateY(-10px);
-  }
-
-  .feature-item i {
-    font-size: 48px;
-    margin-bottom: 20px;
-    color: #007bff;
-  }
-
-  .feature-item h3 {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 15px;
-  }
-
-  .feature-item p {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-
-  .feature-item ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 20px;
-  }
-
-  .feature-item ul li {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-
-  .feature-item .price {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #007bff;
-  }
-
-  .feature-item .btn-primary {
-    font-size: 16px;
-    padding: 10px 25px;
-    border-radius: 30px;
-    background-color: #007bff;
-    border-color: #007bff;
-    transition: all 0.3s ease;
-  }
-
-  .feature-item .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
-  }
-
-/* Benefits */
-  .benefits {
-    padding: 80px 0;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
- h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 40px;
-    text-align: center;
+.feature-item:hover {
+  transform: translateY(-10px);
+}
+
+.feature-item i {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.feature-item h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.feature-item p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.feature-item ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.feature-item ul li {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.feature-item .price {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.feature-item .btn-primary {
+  font-size: 16px;
+  padding: 10px 25px;
+  border-radius: 30px;
+  background-color: #007bff;
+  border-color: #007bff;
+  transition: all 0.3s ease;
+}
+
+.feature-item .btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Benefits */
+.benefits {
+  padding: 80px 0;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: center;
 }
 
 .benefit-card {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 30px;
-    margin-bottom: 30px;
-    text-align: center;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-
 .benefit-card:hover {
-    transform: translateY(-10px);
+  transform: translateY(-10px);
 }
 
 .benefit-card i {
-    font-size: 48px;
-    margin-bottom: 20px;
-    color: #007bff;
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #007bff;
 }
 
 .benefit-card h3 {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
 
 .benefit-card p {
-    font-size: 16px;
-    margin-bottom: 0;
+  font-size: 16px;
+  margin-bottom: 0;
 }
-
 
 /* Plans Section */
 
-
-.plans-section{
+.plans-section {
   padding: 30px 0px;
 }
 .plans-section .card {
@@ -310,9 +304,7 @@ body {
   border-color: #0062cc;
 }
 
-
 /* Accordian */
-
 
 .faq {
   padding: 80px 0;
@@ -374,18 +366,18 @@ body {
   border-top: 1px solid #dee2e6;
 }
 
-.accordion-button::after, .accordion-button:not(.collapsed)::after{
-background: none;
+.accordion-button::after,
+.accordion-button:not(.collapsed)::after {
+  background: none;
 }
-
 
 /* Image Slider */
 
-.portfolio-section{
+.portfolio-section {
   padding: 50px 0px;
 }
 
-.slider-container { 
+.slider-container {
   padding-inline: 10px;
   overflow: hidden;
   position: relative;
@@ -446,7 +438,7 @@ background: none;
 
 @media (max-width: 768px) {
   .slider-container {
-      width: 100%;
+    width: 100%;
   }
 
   .image-slide {
@@ -454,14 +446,12 @@ background: none;
   }
 
   .btn-control {
-      padding: 5px 10px;
-      font-size: 15px;
-      font-weight: 600;
-      margin: 0px;
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0px;
   }
 }
-
-
 
 /* Ecommerce Section */
 
@@ -551,7 +541,6 @@ background: none;
 }
 
 .advertisers-service-sec .icon-wrapper {
-
   background-color: #2c7bfe;
   position: relative;
   margin: auto;
@@ -566,9 +555,8 @@ background: none;
   z-index: 3;
 }
 
-.icon-wrapper img{
+.icon-wrapper img {
   width: 100%;
- 
 }
 .advertisers-service-sec .service-card:hover:after {
   top: 0%;
@@ -578,7 +566,6 @@ background: none;
   background-color: #ffffff;
 }
 
-
 .advertisers-service-sec .service-card:hover h3 {
   color: #ffffff;
 }
@@ -587,7 +574,7 @@ background: none;
   color: #f0f0f0;
 }
 
-.advertisers-service-sec .service-card:hover .card-text li::before{
+.advertisers-service-sec .service-card:hover .card-text li::before {
   color: white;
 }
 
@@ -596,7 +583,6 @@ background: none;
   list-style: none;
   text-align: left;
   position: relative;
- 
 }
 
 .card-text li:last-child {
@@ -604,7 +590,6 @@ background: none;
 }
 
 .card-text li::before {
-  
   content: "\2713";
   position: absolute;
   left: -25px;
@@ -612,6 +597,25 @@ background: none;
   color: #007bff;
   font-size: 18px;
   font-weight: 700;
+}
+
+.project-section {
+  background-color: #fff;
+  padding: 50px 0px;
+}
+
+.project-section .content p {
+  text-align: justify;
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.project-section .image img {
+  margin-block: 20px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
 }
 
 /* Dynamic Website Choose Plan */
@@ -707,7 +711,7 @@ background: none;
   background-color: #f9f9f9;
 }
 
-#choose-plan .list-group-flush > .list-group-item{
+#choose-plan .list-group-flush > .list-group-item {
   text-align: left;
   line-height: 2;
 }
@@ -719,7 +723,6 @@ background: none;
 }
 
 #choose-plan .list-group-item ul li {
-  
   position: relative;
   padding-left: 25px;
   /* margin-bottom: 10px; */
@@ -728,7 +731,7 @@ background: none;
 }
 
 #choose-plan .list-group-item ul li::before {
-  content: '\2713';
+  content: "\2713";
   position: absolute;
   left: 0;
   top: 0;
@@ -759,6 +762,91 @@ background: none;
 
 @media (max-width: 767px) {
   #choose-plan .card {
-      max-width: 100%;
+    max-width: 100%;
   }
+}
+
+/* Contact Page/Section */
+
+.contact-form-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.contact-form-section .form-container {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 800px;
+  width: 100%;
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  transition: all 0.3s ease;
+}
+
+.contact-form-section .image-container {
+  position: relative;
+  background-color: #419dff;
+}
+
+.contact-form-section .image-container p {
+  color: white;
+  position: absolute;
+  top: 25%;
+  margin-left: 30px;
+}
+.contact-form-section .form-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px 0 0 12px;
+  position: absolute;
+  bottom: 0px;
+}
+.contact-form-section .form-content {
+  padding: 20px;
+  flex: 1;
+}
+.contact-form-section .form-content h2 {
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  color: #333;
+  text-align: center;
+}
+.contact-form-section .form-content .form-group {
+  margin-bottom: 15px;
+}
+.contact-form-section .form-content .btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.contact-form-section .form-content .btn:hover {
+  background-color: #0056b3;
+}
+.contact-form-section .form-group label {
+  font-weight: bold;
+}
+.contact-form-section .form-group input,
+.form-group select,
+.form-group textarea {
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+.contact-form-section .form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+.contact-form-section .form-group textarea {
+  resize: none;
 }

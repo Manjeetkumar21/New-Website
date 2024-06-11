@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Stylish Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="contact-form-section">
+        <div class="form-container">
+            <div class="col-md-6 p-0 d-none d-md-block image-container">
+                <p><i>"Take the first step towards realizing your vision"</i></p>
+                <img src="../images/image12.png" alt="Form Image">
+            </div>
+            <div class="col-md-6 col-12 form-content">
+                <h2>Contact Us</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                    </div>
+                    <div class="form-group">
+                        <label for="package">Select Package</label>
+                        <select class="form-control" id="package">
+                            <option value="default">Select Package</option>
+                            <option value="static">Static Website</option>
+                            <option value="ecommerce">E-commerce Website</option>
+                        </select>
+                    </div>
+                    <div class="form-group d-none" id="businessTypeGroup">
+                        <label for="businessType">Business Type</label>
+                        <select class="form-control" id="businessType">
+                            
+                            <option value="startup">Startup Business</option>
+                            <option value="small">Small Business</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" class="form-control" id="city" placeholder="Enter your city">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+                    </div>
+                    <button type="submit" class="primary-button" style="padding: none;">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('package').addEventListener('change', function() {
+            var businessTypeGroup = document.getElementById('businessTypeGroup');
+            if (this.value === 'static') {
+                businessTypeGroup.classList.remove('d-none');
+            } else {
+                businessTypeGroup.classList.add('d-none');
+            }
+        });
+    </script>
+</body>
+</html>
