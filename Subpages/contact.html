@@ -3,61 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Stylish Form</title>
+    <title>Contact Us</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="contact-form-section">
-        <div class="form-container">
-            <div class="col-md-6 p-0 d-none d-md-block image-container">
-                <p><i>"Take the first step towards realizing your vision"</i></p>
-                <img src="../images/image12.png" alt="Form Image">
-            </div>
-            <div class="col-md-6 col-12 form-content">
-                <h2>Contact Us</h2>
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
-                    </div>
-                    <div class="form-group">
+    <div class="contact-form-section jumbotron">
+        <div class="container">
+            <div class="row">
+              <div class="col-md-6 content">
+                <h2>Feel Free to Contact Us</h2>
+                <p>
+                  If you're looking for a partner who can help you navigate the
+                  digital landscape and achieve tangible results, look no further.
+                </p>
+                <img
+                  src="../images/image33.png"
+                  alt="Clients"
+                  class="img-fluid mb-4"
+                />
+              </div>
+              <div class="col-md-6">
+                <div class="form-container">
+                  <h4>
+                    <span>Please provide the requested details in the form</span>
+                  </h4>
+                  <form>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="name">Your Name</label>
+                        <i class="fa fa-user"></i>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="name"
+                          placeholder="Your Name"
+                          required
+                        />
+                      </div>
+                      <div class="form-group col-md-6">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        <i class="fa fa-envelope"></i>
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="email"
+                          placeholder="Your Email"
+                          required
+                        />
+                      </div>
                     </div>
-                    <div class="form-group">
-                        <label for="phone">Phone</label>
-                        <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
-                    </div>
-                    <div class="form-group">
-                        <label for="package">Select Package</label>
-                        <select class="form-control" id="package">
-                            <option value="default">Select Package</option>
-                            <option value="static">Static Website</option>
-                            <option value="ecommerce">E-commerce Website</option>
-                        </select>
-                    </div>
-                    <div class="form-group d-none" id="businessTypeGroup">
-                        <label for="businessType">Business Type</label>
-                        <select class="form-control" id="businessType">
-                            
-                            <option value="startup">Startup Business</option>
-                            <option value="small">Small Business</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="mobile">Mobile No.</label>
+                        <i class="fa fa-phone"></i>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="mobile"
+                          placeholder="Mobile Number"
+                          required
+                        />
+                      </div>
+                      <div class="form-group col-md-6">
                         <label for="city">City</label>
-                        <input type="text" class="form-control" id="city" placeholder="Enter your city">
+                        <i class="fa fa-city"></i>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="city"
+                          placeholder="City"
+                          required
+                        />
+                      </div>
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+                      <label for="service">Service</label>
+                      <i class="fa fa-briefcase"></i>
+                      <select class="form-control" id="service" required>
+                        <option value="" disabled >- Select Service -</option>
+                        <option value="static-website">Static Website</option>
+                        <option value="e-commerce-website">
+                          E-Commerce Website
+                        </option>
+                        <option value="digital-marketing">Digital Marketing</option>
+                      </select>
                     </div>
-                    <button type="submit" class="primary-button" style="padding: none;">Submit</button>
-                </form>
+                    <div class="form-group d-none" id="business-type-group">
+                      <label for="business-type">Business Type</label>
+                      <i class="fa fa-building"></i>
+                      <select class="form-control" id="business-type">
+                        <option value="startup">Startup Business</option>
+                        <option value="small-business">Small Business</option>
+                      </select>
+                    </div>
+                    <div class="form-group d-none" id="marketing-type-group">
+                      <label for="marketing-type">Marketing Type</label>
+                      <i class="fa fa-bullhorn"></i>
+                      <select class="form-control" id="marketing-type">
+                        <option value="organic">Organic Marketing</option>
+                        <option value="inorganic">Inorganic Marketing</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="message"
+                        >Anything else you want to inform us?</label
+                      >
+                      <i class="fa fa-comment" style="top: 45%"></i>
+                      <textarea
+                        class="form-control"
+                        id="message"
+                        rows="3"
+                        placeholder="Please type at least 20 characters about your inquiry"
+                        required
+                      ></textarea>
+                    </div>
+                    <button type="submit" class="primary-button">Submit</button>
+                  </form>
+                </div>
+              </div>
             </div>
-        </div>
+          </div>
     </div>
 
     
@@ -65,14 +140,25 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        document.getElementById('package').addEventListener('change', function() {
-            var businessTypeGroup = document.getElementById('businessTypeGroup');
-            if (this.value === 'static') {
-                businessTypeGroup.classList.remove('d-none');
-            } else {
-                businessTypeGroup.classList.add('d-none');
-            }
+        document.addEventListener("DOMContentLoaded", function () {
+        var serviceSelect = document.getElementById("service");
+        var businessTypeGroup = document.getElementById("business-type-group");
+        var marketingTypeGroup = document.getElementById(
+          "marketing-type-group"
+        );
+
+        serviceSelect.addEventListener("change", function () {
+          var selectedService = serviceSelect.value;
+          businessTypeGroup.classList.add("d-none");
+          marketingTypeGroup.classList.add("d-none");
+
+          if (selectedService === "static-website") {
+            businessTypeGroup.classList.remove("d-none");
+          } else if (selectedService === "digital-marketing") {
+            marketingTypeGroup.classList.remove("d-none");
+          }
         });
+      });
     </script>
 </body>
 </html>

@@ -6,6 +6,7 @@ body {
   background-color: #343a40;
   color: #fff;
   padding: 160px 0 100px 0px;
+  border-radius: 0px;
 }
 .jumbotron h1 {
   font-size: 2rem;
@@ -15,7 +16,6 @@ body {
   font-size: 1.2rem;
   margin-bottom: 30px;
   margin-top: 20px;
-
   line-height: 3rem;
   font-weight: 500;
 }
@@ -767,87 +767,114 @@ h2 {
 
 /* Contact Page/Section */
 
-.contact-form-section {
+
+.contact-form-section .content {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+}
+
+.contact-form-section .content h2 {
+  margin-bottom: 20px;
+}
+
+.contact-form-section .content img {
+  width: 80%;
+}
+
+.contact-form-section .content p {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 3rem;
 }
 
 .contact-form-section .form-container {
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  max-width: 800px;
-  width: 100%;
-  margin: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
-.contact-form-section .image-container {
-  position: relative;
-  background-color: #419dff;
-}
-
-.contact-form-section .image-container p {
-  color: white;
-  position: absolute;
-  top: 25%;
-  margin-left: 30px;
-}
-.contact-form-section .form-container img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px 0 0 12px;
-  position: absolute;
-  bottom: 0px;
-}
-.contact-form-section .form-content {
-  padding: 20px;
-  flex: 1;
-}
-.contact-form-section .form-content h2 {
-  margin-bottom: 20px;
-  font-size: 1.8em;
-  color: #333;
+.contact-form-section .form-container h4 {
   text-align: center;
+  margin-bottom: 3rem;
 }
-.contact-form-section .form-content .form-group {
-  margin-bottom: 15px;
+
+.contact-form-section .form-container h4 span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding-bottom: 5px;
 }
-.contact-form-section .form-content .btn {
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.contact-form-section .form-content .btn:hover {
-  background-color: #0056b3;
-}
+
 .contact-form-section .form-group label {
-  font-weight: bold;
+  color: #1d1d1d;
 }
+
 .contact-form-section .form-group input,
-.form-group select,
-.form-group textarea {
-  border: 2px solid #ddd;
-  border-radius: 5px;
-  transition: border-color 0.3s ease;
-}
-.contact-form-section .form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-  border-color: #007bff;
-  outline: none;
-}
+.contact-form-section .form-group select,
 .contact-form-section .form-group textarea {
-  resize: none;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  padding-left: 40px;
+}
+
+.contact-form-section .form-group {
+  position: relative;
+}
+
+.contact-form-section .form-group .fa {
+  position: absolute;
+  left: 15px;
+  top: 72%;
+  transform: translateY(-50%);
+  color: #525252;
+}
+
+.contact-form-section h4 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+@media (max-width: 490px) {
+
+  .jumbotron{
+    padding: 130px 0 100px 0px;
+  }
+  .contact-form-section .content {
+      padding: 20px;
+  }
+
+  .contact-form-section .content h2 {
+      margin-bottom: 20px;
+      font-size: 1.3rem;
+  }
+
+  .contact-form-section .content p {
+      font-size: small;
+  }
+
+  .contact-form-section .form-container {
+      margin-top: 20px;
+      padding: 20px;
+  }
+
+  .contact-form-section .form-container form {
+      font-size: 0.9rem;
+  }
+
+  .contact-form-section .form-group label {
+      font-size: 0.9rem;
+  }
+
+  .contact-form-section input::placeholder,
+  .contact-form-section textarea::placeholder,
+  .contact-form-section select option[disabled] {
+      font-size: 0.9rem;
+  }
 }
 
 
