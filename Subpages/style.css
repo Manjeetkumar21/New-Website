@@ -1158,3 +1158,77 @@ margin-block: 0.5rem;
   color: #fff;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
+
+
+/* Software Development */
+/* Software Dev Section */
+
+.software-dev-section {
+  padding: 50px 0px;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.software-dev-section .section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 20px 0;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.software-dev-section .section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.software-dev-section .section:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.software-dev-section .section img {
+  width: 40%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.software-dev-section .section img:hover {
+  transform: scale(1);
+}
+.software-dev-section .section-content {
+  width: 50%;
+  padding: 20px;
+}
+.software-dev-section .section-content h2 {
+  color: #2c3e50;
+  font-size: 28px;
+  text-align: left;
+  margin-bottom: 15px;
+}
+.software-dev-section .section-content p {
+  line-height: 1.7;
+  color: #4f4f4f;
+  text-align: justify;
+}
+.software-dev-section .section-content p a {
+  color: #3498db;
+  text-decoration: none;
+}
+.software-dev-section .section-content p a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .software-dev-section .section {
+    flex-direction: column;
+  }
+  .software-dev-section .section:nth-child(even) {
+    flex-direction: column;
+  }
+  .software-dev-section .section img, .software-dev-section .section-content {
+    width: 100%;
+  }
+  .software-dev-section .section-content {
+    padding: 10px 0;
+  }
+}
