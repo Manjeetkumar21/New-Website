@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      
+    </style>
+</head>
+<body>
+    <div class="contact-form-section contact-us">
+      <div class="jumbotron mb-5">
+        <div class="container">
+          <h1 class="text-center mb-5">Contact Us</h1>
+        </div>
+      </div>
+        <div class="container">
+            <div class="row">
+              <div class="col-md-6 content" style="align-items: start;">
+                <h2 style="text-align: left;">Feel Free to Contact Us</h2>
+                <p style="text-align: left;"><strong><span>Address:</span></strong> Near Aacharya Narendra Dev Inter College, Lahasari Market, Gorakhpur, Uttar Pradesh, India, 273016</p>
+                <p style="text-align: left;"><strong><span>Phone:</span></strong> +91 9151533360</p>
+                <p style="text-align: left;"><strong><span>Email:</span></strong> <strong><a href="mailto:contact@360lution.com">contact@360lution.com</a></strong></p>
+                
+              </div>
+              <div class="col-md-6">
+                <div class="form-container">
+                  <h4>
+                    <span>Get in Touch</span>
+                  </h4>
+                  <form>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="name">Your Name</label>
+                        <i class="fa fa-user"></i>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="name"
+                          placeholder="Your Name"
+                          required
+                        />
+                      </div>
+                      
+                      <div class="form-group col-md-6">
+                        <label for="mobile">Mobile No.</label>
+                        <i class="fa fa-phone"></i>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="mobile"
+                          placeholder="Mobile Number"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-12">
+                        <label for="email">Email</label>
+                        <i class="fa fa-envelope"></i>
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="email"
+                          placeholder="Your Email"
+                          required
+                        />
+                      </div>
+                      
+                    </div>
+                    
+                    
+                    <div class="form-group">
+                      <label for="message"
+                        >Message</label
+                      >
+                      <i class="fa fa-comment" style="top: 45%"></i>
+                      <textarea
+                        class="form-control"
+                        id="message"
+                        rows="4"
+                        placeholder="Write your message"
+                        required
+                      ></textarea>
+                    </div>
+                    <button type="submit" class="primary-button">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        var serviceSelect = document.getElementById("service");
+        var businessTypeGroup = document.getElementById("business-type-group");
+        var marketingTypeGroup = document.getElementById(
+          "marketing-type-group"
+        );
+
+        serviceSelect.addEventListener("change", function () {
+          var selectedService = serviceSelect.value;
+          businessTypeGroup.classList.add("d-none");
+          marketingTypeGroup.classList.add("d-none");
+
+          if (selectedService === "static-website") {
+            businessTypeGroup.classList.remove("d-none");
+          } else if (selectedService === "digital-marketing") {
+            marketingTypeGroup.classList.remove("d-none");
+          }
+        });
+      });
+    </script>
+</body>
+</html>
