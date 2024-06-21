@@ -6,6 +6,7 @@ body {
   background-color: #f8f9fa;
   font-family: 'Montserrat', sans-serif;
 }
+
 .jumbotron {
   position: relative;
   background-color: #343a40;
@@ -1432,6 +1433,7 @@ margin-block: 0.5rem;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.696);
+  backdrop-filter: blur(5px);
   z-index: 1;
 }
 
@@ -1539,6 +1541,7 @@ margin-block: 0.5rem;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.696);
+  backdrop-filter: blur(5px);
   z-index: 1;
 }
 
@@ -1569,6 +1572,7 @@ margin-block: 0.5rem;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.696);
+  backdrop-filter: blur(5px);
   z-index: 1;
 }
 
@@ -1639,4 +1643,35 @@ margin-block: 0.5rem;
 .career-section .job-card .btn:hover {
   background-color: #0056b3;
 }
+
+/* Header Banner */
+
+.header-banner .jumbotron {
+  background-size: cover;
+}
+
+.header-banner .jumbotron::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.696);
+  backdrop-filter: blur(5px);
+  z-index: 1;
+}
+
+
+.header-banner .jumbotron .container {
+  position: relative;
+  z-index: 2;
+}
+
+.header-banner h1{
+  font-weight: 800;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
 
