@@ -1553,3 +1553,90 @@ margin-block: 0.5rem;
   font-size: 3rem;
   margin-bottom: 2rem;
 }
+
+/* Career Section */
+
+.career-section .jumbotron {
+  background: url(../images/career-banner.png) center center;
+  background-size: cover;
+}
+
+.career-section .jumbotron::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.696);
+  z-index: 1;
+}
+
+
+.career-section .jumbotron .container {
+  position: relative;
+  z-index: 2;
+}
+
+.career-section h1{
+  font-weight: 800;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.career-image img{
+  width: 100%;
+  margin-block: 1rem;
+}
+
+.career-section .career-content{
+  line-height: 2;
+
+}
+
+.career-section .why-choose .text-center{
+  line-height: 2;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.career-section .job-card-section{
+  padding: 80px 0px;
+  background-color: #f7f7f7;
+}
+
+.career-section .job-card {
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.career-section .job-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+.career-section .job-card .card-body {
+  padding: 20px;
+  text-align: center;
+}
+.career-section .job-card h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+}
+.career-section .job-card p {
+  color: #666;
+  margin: 10px 0 20px;
+}
+.career-section .job-card .btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s;
+}
+.career-section .job-card .btn:hover {
+  background-color: #0056b3;
+}
+
