@@ -1,44 +1,53 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const texts = [
-        "Transforming Ideas into Digital Reality",
-        "Empowering Businesses with Technology",
-        "Innovative Solutions for Modern Problems",
-        "Your Vision, Our Innovation"
-    ];
+// Hero Section Slider
+$(document).ready(function() {
+    var intervalTime = 5000;
 
-    let count = 0;
-    let index = 0;
-    let currentText = '';
-    let letter = '';
-    let isDeleting = false;
+    function startProgressBar() {
+        $('.carousel-indicators .active::before').css('transform', 'scaleX(0)');
+    }
 
-    (function type() {
-        if (count === texts.length) {
-            count = 0;
-        }
-        currentText = texts[count];
+    function resetProgressBars() {
+        $('.carousel-indicators li::before').css('transform', 'scaleX(1)');
+    }
 
-        if (!isDeleting) {
-            letter = currentText.slice(0, ++index);
-        } else {
-            letter = currentText.slice(0, --index);
-        }
+    function handleCarouselSlide() {
+        resetProgressBars();
+        setTimeout(startProgressBar, 10);
+    }
 
-        document.getElementById('hero-headline').textContent = letter;
+    
+    startProgressBar();
 
-        if (!isDeleting && letter.length === currentText.length) {
-            setTimeout(() => isDeleting = true, 2000); // Wait 2 seconds before starting to delete
-        } else if (isDeleting && letter.length === 0) {
-            isDeleting = false;
-            count++;
-            setTimeout(type, 500); // Short pause before typing the next text
-            return;
-        }
+    $('#heroCarousel').on('slide.bs.carousel', function () {
+        resetProgressBars();
+    });
 
-        setTimeout(type, isDeleting ? 50 : 100);
-    }());
+    $('#heroCarousel').on('slid.bs.carousel', function () {
+        handleCarouselSlide();
+    });
+
+   
+    setInterval(function() {
+        $('#heroCarousel').carousel('next');
+    }, intervalTime);
+
+
+    $('#heroCarousel').on('slide.bs.carousel', function (e) {
+    var $currentSlide = $(e.relatedTarget);
+    var $prevSlide = $(e.from ? $(this).find('.carousel-item').eq(e.from) : $('.carousel-item.active'));
+
+    $prevSlide.find('.highlight').addClass('exit');
+    $currentSlide.find('.highlight').removeClass('active exit');
+
+    setTimeout(function() {
+        $prevSlide.find('.highlight').removeClass('active exit');
+        $currentSlide.find('.highlight').addClass('active');
+    }, 10);
 });
 
+$('.carousel-item.active .highlight').addClass('active');
+
+});
 
 function toggleContent() {
     const moreContent = document.getElementById('more-content');
