@@ -1327,81 +1327,68 @@ margin-block: 0.5rem;
   margin-bottom: 2rem;
 }
 
-.portfolio-section .portfolio-grid {
+.portfolio-section.portfolio-section .portfolio-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
 }
 
-.portfolio-section .card {
+.portfolio-section .portfolio-item {
+  margin-bottom: 24px;
+}
+
+.portfolio-section .portfolio-wrapper {
   position: relative;
-  width: 400px;
-  height: auto;
-  border: none;
-  border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-  cursor: pointer;
+  
+  border-radius: 10px;
 }
 
-.portfolio-section .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.portfolio-section .card-img-top {
+.portfolio-section .portfolio-wrapper img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s;
+  display: block;
+  
+  transition: transform 0.3s ease;
 }
 
-.portfolio-section .card:hover .card-img-top {
-  transform: scale(1.1);
-}
-
-.portfolio-section .card-overlay {
+.portfolio-section .portfolio-wrapper .overlay {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  opacity: 0;
-  transition: opacity 0.3s;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
-  align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: 1rem;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.portfolio-section .card:hover .card-overlay {
+.portfolio-section .portfolio-wrapper .overlay-button {
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.portfolio-section .portfolio-wrapper .overlay-button:hover {
+  background-color: #0056b3;
+}
+
+.portfolio-section .portfolio-wrapper:hover img {
+  transform: scale(1.1);
+}
+
+.portfolio-section .portfolio-wrapper:hover .overlay {
   opacity: 1;
 }
 
-.portfolio-section .card-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.modal-content {
-  background-color: transparent;
-  border: none;
-}
-
-.modal-body {
-  
-  padding: 0px;
-}
-
-.modal-body img {
-  width: 100%;
-  height: auto;
-  border-radius: 15px;
+.portfolio-section .col-md-4, .col-sm-6{
+  padding-inline: 12px !important;
 }
 
 @media (max-width: 480px){
@@ -1674,4 +1661,41 @@ margin-block: 0.5rem;
   margin-bottom: 2rem;
 }
 
+/* Button */
+
+.button {
+  background-color: #ffffff00;
+  font-weight: 600;
+  color: #fff;
+  
+  height: 2.9em;
+  border: #ffffff 0.2em solid;
+  border-radius: 11px;
+  text-align: right;
+  transition: all 0.6s ease;
+  position: relative;
+}
+
+.button:hover {
+  background-color: #ffffff;
+  color: #000;
+}
+
+.button svg {
+  width: 1.5rem;
+  margin-left: 10px;
+  position: absolute;
+  top: 20%;
+  display: flex;
+  transition: all 0.6s ease;
+}
+
+.button:hover svg {
+  transform: translateX(5px);
+}
+
+.button .text {
+  margin: 0rem 1rem 0rem 1.5rem;
+  padding-left: 1.5rem;
+}
 
