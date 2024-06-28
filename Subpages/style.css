@@ -357,8 +357,14 @@ h2 {
 
 .accordion-button::after {
   content: "\f107";
+  font-family: "Font Awesome 6 Free";
   font-weight: 900;
   transition: transform 0.3s ease;
+}
+
+.accordion-button:not(.collapsed){
+  background-color: transparent;
+  box-shadow: none;
 }
 
 .accordion-button:not(.collapsed)::after {
@@ -367,7 +373,7 @@ h2 {
 
 .accordion-body {
   color: #6c757d;
-  padding: 20px;
+  padding: 1.5rem 2.5rem;
   border-top: 1px solid #dee2e6;
 }
 
@@ -376,6 +382,19 @@ h2 {
   background: none;
 }
 
+@media (max-width: 480px) {
+  .faq h2{
+    font-size: 1.5rem;
+  }
+
+  .accordion-button{
+    font-size: 1rem;
+  }
+
+  .accordion-body{
+    font-size: 0.9rem;
+  }
+}
 /* Image Slider */
 
 .portfolio-section {
@@ -403,12 +422,15 @@ h2 {
 
 .image-slide {
   min-width: calc(100% / 3 - 20px);
+  height: 250px;
   margin: 10px;
   transition: transform 0.3s;
 }
 
 .image-slide img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -431,8 +453,8 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -447,7 +469,8 @@ h2 {
   }
 
   .image-slide {
-    min-width: calc(100% / 2 - 20px);
+    min-width: calc(100% - 20px);
+    height: 150px;
   }
 
   .btn-control {
@@ -1341,14 +1364,16 @@ margin-block: 0.5rem;
 .portfolio-section .portfolio-wrapper {
   position: relative;
   overflow: hidden;
-  
+  height: 250px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
 
 .portfolio-section .portfolio-wrapper img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
-  
   transition: transform 0.3s ease;
 }
 
@@ -1697,5 +1722,141 @@ margin-block: 0.5rem;
 .button .text {
   margin: 0rem 1rem 0rem 1.5rem;
   padding-left: 1.5rem;
+}
+
+/* Portfolio Slider Section */
+
+.portfolio-slider-section{
+  padding: 60px 0px;
+}
+
+.portfolio-slider-section .portfolio-container {
+  width: 100%;
+  padding: 0px 20px 50px 20px;
+  position: relative;
+}
+
+.portfolio-slider-section h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.portfolio-slider-section .swiper-container {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  
+}
+
+.portfolio-slider-section .swiper-slide {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+}
+
+.portfolio-slider-section .swiper-slide img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+  border-radius: 10px;
+}
+
+.portfolio-slider-section .swiper-slide::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-slider-section .swiper-slide:hover {
+  transform: scale(1.05);
+}
+
+.portfolio-slider-section .swiper-slide:hover img {
+  transform: scale(1.1);
+  filter: blur(2px);
+}
+
+.portfolio-slider-section .swiper-slide:hover::after {
+  opacity: 1;
+}
+
+.portfolio-slider-section .swiper-slide::before {
+  content: "View Project";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-slider-section .swiper-slide:hover::before {
+  opacity: 1;
+}
+
+.portfolio-slider-section .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.portfolio-slider-section .swiper-button-next,
+.portfolio-slider-section .swiper-button-prev {
+  background-color: #007aff;
+  color: #ffffff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+  top: auto;
+  margin: 0px;
+}
+
+.portfolio-slider-section .swiper-button-next:hover,
+.portfolio-slider-section .swiper-button-prev:hover {
+  background-color: #025add;
+}
+
+.portfolio-slider-section .swiper-button-next::after,
+.portfolio-slider-section .swiper-button-prev::after {
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.portfolio-slider-section .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #d0d0d0;
+  opacity: 0.7;
+}
+
+.portfolio-slider-section .swiper-pagination-bullet-active {
+  opacity: 1;
+  background-color: #007aff;
+}
+
+@media (max-width: 768px) {
+  .portfolio-slider-section .swiper-container {
+    height: 200px;
+  }
 }
 

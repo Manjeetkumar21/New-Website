@@ -31,6 +31,10 @@ body{
 
 /* Hero Section */
 
+.hero-section{
+  padding-top: 0px;
+}
+
 .hero-section .carousel-item {
   height: 100vh;
   background-size: cover;
@@ -75,7 +79,7 @@ body{
   margin: 0 auto;
 }
 
-.hero-section .carousel-indicators li {
+.hero-section .carousel-indicators button {
   width: 20%;
   margin: 0 5px;
   height: 2px;
@@ -90,28 +94,28 @@ body{
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-.hero-section .carousel-indicators li::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgb(0, 140, 255);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 5s linear;
+.carousel-indicators button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 140, 255);
+    transform: scaleX(var(--progress, 0));
+    transform-origin: left;
+    transition: transform 5s linear;
 }
 
 .hero-section .carousel-indicators .active::before {
   transform: scaleX(1);
 }
 
-.button {
+.hero-section .button {
   background-color: #ffffff00;
   font-weight: 600;
   color: #fff;
-  
+  width: 8.5em;
   height: 2.9em;
   border: #ffffff 0.2em solid;
   border-radius: 11px;
@@ -120,12 +124,12 @@ body{
   position: relative;
 }
 
-.button:hover {
+.hero-section .button:hover {
   background-color: #ffffff;
   color: #000;
 }
 
- .button svg {
+.hero-section .button svg {
   width: 1.5rem;
   margin-left: 10px;
   position: absolute;
@@ -134,13 +138,12 @@ body{
   transition: all 0.6s ease;
 }
 
-.button:hover svg {
+.hero-section .button:hover svg {
   transform: translateX(5px);
 }
 
-.button .text {
-  margin: 0rem 1rem 0rem 1.5rem;
-  padding-left: 1.5rem;
+.hero-section .text {
+  margin: 0 1.1rem;
 }
 
 .hero-section .highlight-wrapper {
@@ -215,24 +218,23 @@ body{
 /* Hero Buttons */
 
 .primary-button {
-    --color: #007bff;
-    font-family: inherit;
-    display: inline-block;
-    width: 8em;
-    line-height: 2.5em;
-    margin-top: 20px;
-    position: relative;
-    overflow: hidden;
-    border: 2px solid var(--color);
-    transition: color .5s;
-    z-index: 1;
-    font-size: 17px;
-    border-radius: 6px;
-    font-weight: 500;
-    color: var(--color);
-    background-color: white;
-   }
-   
+  --color: #007bff;
+  display: inline-block;
+  padding-inline: 1.5rem;
+  padding-block: 0.5rem;
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--color);
+  transition: color .5s;
+  z-index: 1;
+  font-size: 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  color: var(--color);
+  background-color: white;
+ }
+
    .primary-button:before {
     content: "";
     position: absolute;
@@ -386,4 +388,233 @@ body{
     margin-bottom: 0;
     color: #fff;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Accordian */
+
+.faq {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+
+.faq h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #343a40;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-item {
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.accordion-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.accordion-button {
+  font-size: 20px;
+  font-weight: bold;
+  color: #343a40;
+  transition: color 0.3s ease;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.accordion-button:hover,
+.accordion-button:focus {
+  color: #007bff;
+}
+
+.accordion-button::after {
+  content: "\f107";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  transition: transform 0.3s ease;
+}
+
+.accordion-button:not(.collapsed){
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(-180deg);
+}
+
+.accordion-body {
+  color: #6c757d;
+  padding: 1.5rem 2.5rem;
+  border-top: 1px solid #dee2e6;
+}
+
+.accordion-button::after,
+.accordion-button:not(.collapsed)::after {
+  background: none;
+}
+
+@media (max-width: 480px) {
+  .faq h2{
+    font-size: 1.5rem;
+  }
+
+  .accordion-button{
+    font-size: 1rem;
+  }
+
+  .accordion-body{
+    font-size: 0.9rem;
+  }
+}
+
+/* Portfolio Slider Section */
+
+.portfolio-slider-section{
+  padding: 60px 0px;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.portfolio-slider-section .portfolio-container {
+  width: 100%;
+  padding: 0px 20px 50px 20px;
+  position: relative;
+}
+
+.portfolio-slider-section h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.portfolio-slider-section .swiper-container {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  
+}
+
+.portfolio-slider-section .swiper-slide {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+}
+
+.portfolio-slider-section .swiper-slide img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+  border-radius: 10px;
+}
+
+.portfolio-slider-section .swiper-slide::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-slider-section .swiper-slide:hover {
+  transform: scale(1.05);
+}
+
+.portfolio-slider-section .swiper-slide:hover img {
+  transform: scale(1.1);
+  filter: blur(2px);
+}
+
+.portfolio-slider-section .swiper-slide:hover::after {
+  opacity: 1;
+}
+
+.portfolio-slider-section .swiper-slide::before {
+  content: "View Project";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-slider-section .swiper-slide:hover::before {
+  opacity: 1;
+}
+
+.portfolio-slider-section .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.portfolio-slider-section .swiper-button-next,
+.portfolio-slider-section .swiper-button-prev {
+  background-color: #007aff;
+  color: #ffffff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+  top: auto;
+  margin: 0px;
+}
+
+.portfolio-slider-section .swiper-button-next:hover,
+.portfolio-slider-section .swiper-button-prev:hover {
+  background-color: #025add;
+}
+
+.portfolio-slider-section .swiper-button-next::after,
+.portfolio-slider-section .swiper-button-prev::after {
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.portfolio-slider-section .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #d0d0d0;
+  opacity: 0.7;
+}
+
+.portfolio-slider-section .swiper-pagination-bullet-active {
+  opacity: 1;
+  background-color: #007aff;
+}
+
+@media (max-width: 768px) {
+  .portfolio-slider-section .swiper-container {
+    height: 200px;
+  }
 }

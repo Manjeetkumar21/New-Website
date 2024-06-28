@@ -1,52 +1,79 @@
 // Hero Section Slider
-$(document).ready(function() {
-    var intervalTime = 5000;
-
-    function startProgressBar() {
-        $('.carousel-indicators .active::before').css('transform', 'scaleX(0)');
-    }
-
-    function resetProgressBars() {
-        $('.carousel-indicators li::before').css('transform', 'scaleX(1)');
-    }
-
-    function handleCarouselSlide() {
-        resetProgressBars();
-        setTimeout(startProgressBar, 10);
-    }
-
-    
-    startProgressBar();
-
-    $('#heroCarousel').on('slide.bs.carousel', function () {
-        resetProgressBars();
-    });
-
-    $('#heroCarousel').on('slid.bs.carousel', function () {
-        handleCarouselSlide();
-    });
-
-   
-    setInterval(function() {
-        $('#heroCarousel').carousel('next');
-    }, intervalTime);
-
-
-    $('#heroCarousel').on('slide.bs.carousel', function (e) {
-    var $currentSlide = $(e.relatedTarget);
-    var $prevSlide = $(e.from ? $(this).find('.carousel-item').eq(e.from) : $('.carousel-item.active'));
-
-    $prevSlide.find('.highlight').addClass('exit');
-    $currentSlide.find('.highlight').removeClass('active exit');
-
+document.addEventListener('DOMContentLoaded', function() {
     setTimeout(function() {
-        $prevSlide.find('.highlight').removeClass('active exit');
-        $currentSlide.find('.highlight').addClass('active');
-    }, 10);
-});
+        try {
+            var intervalTime = 5000;
+            var carousel = document.getElementById('heroCarousel');
+            var bsCarousel = new bootstrap.Carousel(carousel, {
+                interval: intervalTime
+            });
 
-$('.carousel-item.active .highlight').addClass('active');
+            function startProgressBar() {
+                var activeIndicator = document.querySelector('.carousel-indicators .active');
+                if (activeIndicator) {
+                    activeIndicator.style.setProperty('--progress', '0');
+                    setTimeout(() => {
+                        activeIndicator.style.setProperty('--progress', '100%');
+                    }, 10);
+                }
+            }
 
+            function resetProgressBars() {
+                document.querySelectorAll('.carousel-indicators button').forEach(function(indicator) {
+                    indicator.style.setProperty('--progress', '0');
+                });
+            }
+
+            function handleCarouselSlide() {
+                resetProgressBars();
+                setTimeout(startProgressBar, 10);
+            }
+
+            function handleHighlight(currentSlide, prevSlide) {
+                if (prevSlide) {
+                    var prevHighlight = prevSlide.querySelector('.highlight');
+                    if (prevHighlight) prevHighlight.classList.add('exit');
+                }
+
+                var currentHighlight = currentSlide.querySelector('.highlight');
+                if (currentHighlight) {
+                    currentHighlight.classList.remove('active', 'exit');
+                    setTimeout(function() {
+                        currentHighlight.classList.add('active');
+                    }, 10);
+                }
+            }
+
+            carousel.addEventListener('slide.bs.carousel', function (event) {
+                resetProgressBars();
+                handleHighlight(event.relatedTarget, carousel.querySelector('.carousel-item.active'));
+            });
+
+            carousel.addEventListener('slid.bs.carousel', function () {
+                handleCarouselSlide();
+            });
+
+            // Initially activate the highlight on the first slide and start progress bar
+            var firstHighlight = carousel.querySelector('.carousel-item.active .highlight');
+            if (firstHighlight) firstHighlight.classList.add('active');
+            startProgressBar();
+
+            // Handle visibility changes
+            document.addEventListener('visibilitychange', function() {
+                if (document.hidden) {
+                    bsCarousel.pause();
+                    resetProgressBars();
+                } else {
+                    bsCarousel.cycle();
+                    handleCarouselSlide();
+                }
+            });
+
+            console.log('Carousel initialized successfully');
+        } catch (error) {
+            console.error('Error initializing carousel:', error);
+        }
+    }, 100);  // Small delay to ensure Bootstrap is initialized
 });
 
 function toggleContent() {

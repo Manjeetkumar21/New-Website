@@ -16,9 +16,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function slide() {
         index++;
-        const offset = index * -(track.offsetWidth / 3);
+        const offset = index * -(track.offsetWidth);
         track.style.transform = `translateX(${offset}px)`;
-
+        console.log(index);
+        console.log("Offset : ", offset)
         if (index >= slides.length) {
             setTimeout(() => {
                 track.style.transition = 'none';
@@ -51,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (index < -1) {
             index = slides.length - 4;
             track.style.transition = 'none';
-            const offset = index * -(track.offsetWidth / 3);
+            const offset = index * -(track.offsetWidth);
             track.style.transform = `translateX(${offset}px)`;
             setTimeout(() => {
                 track.style.transition = 'transform 0.5s ease-in-out';
@@ -67,3 +68,29 @@ document.addEventListener('DOMContentLoaded', function() {
     duplicateSlides();
     startAutoSlide();
 });
+
+//Portfolio Swipper
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    },
+  });
