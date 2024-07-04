@@ -517,6 +517,7 @@ h2 {
   overflow: hidden;
   transition: transform 0.3s ease;
   border-radius: 10px;
+  border: 2px solid yellow;
 }
 
 .portfolio-slider-section .swiper-slide img {
