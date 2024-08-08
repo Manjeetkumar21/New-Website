@@ -39,6 +39,28 @@ let testimonialSwiper = new Swiper('.testimonial-section .swiper-container', {
     },
   });
 
+  let logoSwiper = new Swiper('.logo-swiper .swiper-container', {
+    slidesPerView: 5,
+    loop: true,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+    speed: 800,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 5,
+      },
+      480: {
+        slidesPerView: 2,
+      },
+    },
+  });
+
 // // Hero Section Slider
 // document.addEventListener('DOMContentLoaded', function() {
 //     setTimeout(function() {
