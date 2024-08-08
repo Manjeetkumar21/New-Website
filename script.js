@@ -29,6 +29,16 @@ const mySwiper = new Swiper('.hero-section .swiper-container', {
     },
 });
 
+let testimonialSwiper = new Swiper('.testimonial-section .swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+  });
+
 // // Hero Section Slider
 // document.addEventListener('DOMContentLoaded', function() {
 //     setTimeout(function() {
