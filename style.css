@@ -998,3 +998,14 @@ z-index: 2;
   overflow: hidden;
 }
 
+@media (max-width: 480px) {
+  .logo-swiper .swiper-slide{
+      height: 80px;
+  }
+
+  .logo-swiper .swiper-slide img {
+      border-width: 1px;
+      filter: grayscale(0%);
+      border-color: #131313;
+  }
+}

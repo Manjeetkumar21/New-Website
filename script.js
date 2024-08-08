@@ -40,7 +40,7 @@ let testimonialSwiper = new Swiper('.testimonial-section .swiper-container', {
   });
 
   let logoSwiper = new Swiper('.logo-swiper .swiper-container', {
-    slidesPerView: 5,
+    slidesPerView: 2,
     loop: true,
     autoplay: {
       delay: 2000,
