@@ -989,7 +989,6 @@ z-index: 2;
 }
 
 .client-logo-section .logo-swiper .swiper-slide img:hover {
-  filter: grayscale(0%); 
   cursor: pointer;
   border-color: #131313;
 }
@@ -1005,7 +1004,6 @@ z-index: 2;
 
         .logo-swiper .swiper-slide img {
             border-width: 1px;
-            filter: grayscale(0%);
             border-color: #131313;
         }
 }
