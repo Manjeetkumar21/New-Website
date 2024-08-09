@@ -984,12 +984,10 @@ z-index: 2;
   border: 2px solid rgb(166, 163, 163);
   border-radius: 10px;
   padding: 10px;
-  filter: grayscale(100%);
   transition: filter 0.3s ease;
 }
 
 .client-logo-section .logo-swiper .swiper-slide img:hover {
-  filter: grayscale(0%); 
   cursor: pointer;
   border-color: #131313;
 }
@@ -1005,7 +1003,6 @@ z-index: 2;
 
   .logo-swiper .swiper-slide img {
       border-width: 1px;
-      filter: grayscale(0%);
       border-color: #131313;
   }
 }
