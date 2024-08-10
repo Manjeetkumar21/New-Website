@@ -357,6 +357,9 @@ h2 {
 .navbar-brand img {
   transition: 0.3s ease-in-out;
 }
+.navbar-brand img{
+  filter: drop-shadow(1px 1px);
+}
 .testimonial-card:before {
   content: "\f10d";
   background-color: #007bff;
