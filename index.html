@@ -19,25 +19,10 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
+  
     <link rel="stylesheet" href="style.css" />
     <style>
-      .whatsapp-button {
-        position: fixed;
-        left: 20px;
-        bottom: 20px;
-        opacity: 0;
-        transition: opacity 0.5s ease-in-out;
-        z-index: 1000;
-      }
-
-      .whatsapp-button img {
-        width: 50px;
-        height: 50px;
-      }
-
-      .show-button {
-        opacity: 1;
-      }
+      
     </style>
   </head>
   <body>
@@ -51,341 +36,359 @@
       <img src="images/whatsapp.png" alt="WhatsApp" />
     </a>
 
+    <header id="header" class="header fixed-top">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="logo" height="40" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <button class="close-menu d-lg-none">
+              <i class="fas fa-times"></i>
+            </button>
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Services <i class="fas fa-chevron-down"></i>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="websiteDevelopment.html">Website Development</a></li>
+                  <li><a class="dropdown-item" href="app-design.html">App Development</a></li>
+                  <li><a class="dropdown-item" href="software-dev.html">Software Development</a></li>
+                  <li><a class="dropdown-item" href="ui-ux.html">UI/UX Designing</a></li>
+                  <li><a class="dropdown-item" href="seo.html">SEO Optimization</a></li>
+                  <li><a class="dropdown-item" href="social-media-marketing.html">Social Media Marketing</a></li>
 
-    <!-- Header Section -->
-    <nav class="navbar sticky-top navbar-expand-lg" style="background-color: #e3f2fd;">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-            <li class="nav-item dropdown ms-2">
-              <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                Services
-              </button>
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="./Subpages/websiteDevelopment.html">Website Development</a></li>
-                <li><a class="dropdown-item" href="./Subpages/app-design.html">Application Design</a></li>
-                <li><a class="dropdown-item" href="./Subpages/software-dev.html">Software Development</a></li>
-                <li><a class="dropdown-item" href="./Subpages/ui-ux.html">Website Development</a></li>
-                <li><a class="dropdown-item" href="./Subpages/seo.html">Application Design</a></li>
-                <li><a class="dropdown-item" href="./Subpages/social-media-marketing.html">Social Media Marketing</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown ms-2">
-              <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                Packages
-              </button>
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="./Subpages/landing.html">Landing Page</a></li>
-                <li><a class="dropdown-item" href="./Subpages/eCommerce.html">E-commerce</a></li>
-                <li><a class="dropdown-item" href="./Subpages/CustomWeb.html">Custome Website</a></li>
-                <li><a class="dropdown-item" href="./Subpages/Static.html">Static Website</a></li>
-                <li><a class="dropdown-item" href="./Subpages/dynamic.html">Dynamic Website</a></li>
-                
-              </ul>
-            </li>
-            <a class="nav-link" href="./Subpages/portfolio.html">Portfolio</a>
-            <a class="nav-link" href="./Subpages/aboutus.html">Pricing</a>
-            <a class="nav-link" href="./Subpages/career.html">Pricing</a>
-            <a class="nav-link" href="./Subpages/contact_us.html">Pricing</a>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="packages.html" id="navbarDropdown">
+                  Packages <i class="fas fa-chevron-down"></i>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li class="dropdown-submenu">
+                    <a class="dropdown-item dropdown-toggle" href="#">Website Packages</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="landing.html">Landing Page</a></li>
+                      <li><a class="dropdown-item" href="Static.html">Static Website</a></li>
+                      <li><a class="dropdown-item" href="dynamic.html">Dynamic Website</a></li>
+                      <li><a class="dropdown-item" href="eCommerce.html">E-commerce Website</a></li>
+                      <li><a class="dropdown-item" href="CustomWeb.html">Custom Website</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu">
+                    <a class="dropdown-item dropdown-toggle" href="#">Digital Marketing Packages</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Organic Package</a></li>
+                      <li><a class="dropdown-item" href="#">Inorganic Package</a></li>
+                      <li><a class="dropdown-item" href="#">SMM Package</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="portfolio.html">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="aboutus.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="career.html">Career</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="career.html">Blogs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact_us.html">Contact</a>
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
 
     <!-- New Hero Section -->
     <section class="hero-section">
       <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="slide-background" style="background-image: url('images/hero-image1.webp')"></div>
-                <div class="slide-content">
-                    <h1 class="animate__animated animate__fadeInLeft">Innovative Solutions</h1>
-                    <p class="animate__animated animate__fadeInLeft animate__delay-1s">We deliver cutting-edge software solutions to drive your business forward.</p>
-                    
-                    <button class="button animate__animated animate__fadeInLeft animate__delay-2s">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
-                      </svg>
-                      <div class="text">
-                        Learn More
-                      </div>
-                  </button>
-                </div>
-                <div class="slide-image animate__animated animate__fadeInRight" style="background-image: url('images/banner-image1.png')">
-                  
-                </div>
-                <div class="custom-shape-divider-bottom-1682452944">
-                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
-                    </svg>
-                </div>
+          <div class="swiper-slide">
+            <div
+              class="slide-background"
+              style="background-image: url('images/hero-image3.webp')"
+            ></div>
+            <div class="slide-content">
+              <h1 class="animate__animated animate__fadeInLeft">
+                Innovative Solutions
+              </h1>
+              <p
+                class="animate__animated animate__fadeInLeft animate__delay-1s"
+              >
+                We deliver cutting-edge software solutions to drive your
+                business forward.
+              </p>
+
+              <button
+                class="button animate__animated animate__fadeInLeft animate__delay-2s"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                  ></path>
+                </svg>
+                <div class="text">Learn More</div>
+              </button>
             </div>
-            <div class="swiper-slide">
-                <div class="slide-background" style="background-image: url('images/hero-image2.webp')"></div>
-                <div class="slide-content">
-                    <h1 class="animate__animated animate__fadeInLeft">Expert Team</h1>
-                    <p class="animate__animated animate__fadeInLeft animate__delay-1s">Our team of skilled professionals ensures top-quality results for every project.</p>
-                    
-                    <button class="button animate__animated animate__fadeInLeft animate__delay-2s">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
-                      </svg>
-                      <div class="text">
-                        Learn More
-                      </div>
-                  </button>
-                </div>
-                <div class="slide-image animate__animated animate__fadeInRight" style="background-image: url('images/banner-image2.png')"></div>
-                <div class="custom-shape-divider-bottom-1682452944">
-                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
-                    </svg>
-                </div>
+            <div
+              class="slide-image animate__animated animate__fadeInRight"
+              style="background-image: url('images/banner-image1.png')"
+            ></div>
+            <div class="custom-shape-divider-bottom-1682452944">
+              <svg
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1200 120"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                  class="shape-fill"
+                ></path>
+              </svg>
             </div>
-            <div class="swiper-slide">
-                <div class="slide-background" style="background-image: url('images/hero-image3.webp')"></div>
-                <div class="slide-content">
-                    <h1 class="animate__animated animate__fadeInLeft">Client-Centric Approach</h1>
-                    <p class="animate__animated animate__fadeInLeft animate__delay-1s">We prioritize your needs and deliver tailored solutions to exceed expectations.</p>
-                    
-                    <button class="button animate__animated animate__fadeInLeft animate__delay-2s">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
-                      </svg>
-                      <div class="text">
-                        Learn More
-                      </div>
-                  </button>
-                </div>
-                <div class="slide-image animate__animated animate__fadeInRight" style="background-image: url('images/banner-image3.png')"></div>
-                <div class="custom-shape-divider-bottom-1682452944">
-                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
-                    </svg>
-                </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="slide-background"
+              style="background-image: url('images/hero-image2.webp')"
+            ></div>
+            <div class="slide-content">
+              <h1 class="animate__animated animate__fadeInLeft">Expert Team</h1>
+              <p
+                class="animate__animated animate__fadeInLeft animate__delay-1s"
+              >
+                Our team of skilled professionals ensures top-quality results
+                for every project.
+              </p>
+
+              <button
+                class="button animate__animated animate__fadeInLeft animate__delay-2s"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                  ></path>
+                </svg>
+                <div class="text">Learn More</div>
+              </button>
             </div>
+            <div
+              class="slide-image animate__animated animate__fadeInRight"
+              style="background-image: url('images/banner-image2.png')"
+            ></div>
+            <div class="custom-shape-divider-bottom-1682452944">
+              <svg
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1200 120"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                  class="shape-fill"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="slide-background"
+              style="background-image: url('images/hero-image1.webp')"
+            ></div>
+            <div class="slide-content">
+              <h1 class="animate__animated animate__fadeInLeft">
+                Client-Centric Approach
+              </h1>
+              <p
+                class="animate__animated animate__fadeInLeft animate__delay-1s"
+              >
+                We prioritize your needs and deliver tailored solutions to
+                exceed expectations.
+              </p>
+
+              <button
+                class="button animate__animated animate__fadeInLeft animate__delay-2s"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                  ></path>
+                </svg>
+                <div class="text">Learn More</div>
+              </button>
+            </div>
+            <div
+              class="slide-image animate__animated animate__fadeInRight"
+              style="background-image: url('images/banner-image3.png')"
+            ></div>
+            <div class="custom-shape-divider-bottom-1682452944">
+              <svg
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1200 120"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                  class="shape-fill"
+                ></path>
+              </svg>
+            </div>
+          </div>
         </div>
         <div class="swiper-pagination"></div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
-    </div>
-     </section>
-  
-
-    <!-- Hero section -->
-    <!-- <section class="hero-section">
-      <div
-        id="heroCarousel"
-        class="carousel slide carousel-fade"
-        data-bs-ride="carousel"
-        data-bs-interval="5000"
-      >
-        <div class="carousel-indicators">
-          <button
-            data-bs-target="#heroCarousel"
-            data-bs-slide-to="0"
-            class="active"
-          ></button>
-          <button data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
-          <button data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
-          <button data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div
-            class="carousel-item active"
-            style="background-image: url('./images/hero-image1.jpg')"
-          >
-            <div class="carousel-caption">
-              <h1>
-                Users Centric <br />
-                <span class="highlight-wrapper"
-                  ><span class="highlight"> Performance </span></span
-                >
-                Focused
-              </h1>
-              <p>
-                Transforming ideas into reality with cutting-edge web and mobile
-                apps.
-              </p>
-              <button class="button">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  class="w-6 h-6"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
-                  ></path>
-                </svg>
-                <div class="text">Button</div>
-              </button>
-            </div>
-          </div>
-          <div
-            class="carousel-item"
-            style="background-image: url('./images/hero-image2.jpg')"
-          >
-            <div class="carousel-caption">
-              <h1>
-                Users Centric <br /><span class="highlight-wrapper"
-                  ><span class="highlight"> Scalability </span></span
-                >
-                Focused
-              </h1>
-              <p>
-                Transforming ideas into reality with cutting-edge web and mobile
-                apps.
-              </p>
-              <button class="button">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  class="w-6 h-6"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
-                  ></path>
-                </svg>
-                <div class="text">Button</div>
-              </button>
-            </div>
-          </div>
-          <div
-            class="carousel-item"
-            style="background-image: url('./images/hero-image3.jpg')"
-          >
-            <div class="carousel-caption">
-              <h1>
-                Users Centric <br />
-                <span class="highlight-wrapper"
-                  ><span class="highlight"> Reliability </span></span
-                >
-                Focused
-              </h1>
-              <p>
-                Transforming ideas into reality with cutting-edge web and mobile
-                apps.
-              </p>
-              <button class="button">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  class="w-6 h-6"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
-                  ></path>
-                </svg>
-                <div class="text">Button</div>
-              </button>
-            </div>
-          </div>
-          <div
-            class="carousel-item"
-            style="background-image: url('./images/hero-image4.jpg')"
-          >
-            <div class="carousel-caption">
-              <h1>
-                Users Centric <br />
-                <span class="highlight-wrapper"
-                  ><span class="highlight"> Availability </span></span
-                >
-                Focused
-              </h1>
-              <p>
-                Transforming ideas into reality with cutting-edge web and mobile
-                apps.
-              </p>
-              <button class="button">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  class="w-6 h-6"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
-                  ></path>
-                </svg>
-                <div class="text">Button</div>
-              </button>
-            </div>
-          </div>
-        </div>
       </div>
-    </section> -->
-    <!-- About Us Section -->
+    </section>
 
-    <section id="about-us">
+    <!-- About us Section -->
+    <section class="about-us-section">
       <div class="container">
-        <h2>About Us</h2>
-        <div class="row align-items-center mt-5">
-          <div class="col-lg-6 mb-4 mb-lg-0">
-            <img
-              src="images/image4.png"
-              class="img-fluid rounded"
-              alt="About Us Image"
-              id="about-image"
-            />
-          </div>
-          <div class="col-lg-6">
-            <p>
-              At 360lution Pvt. Ltd. Development Company, we pride ourselves on
-              delivering innovative and customized software solutions that drive
-              business growth and efficiency. With a team of experienced
-              developers, designers, and project managers, we specialize in
-              creating robust applications tailored to meet the unique needs of
-              our clients across various industries. Our comprehensive range of
-              services includes web and mobile app development, cloud computing,
-              artificial intelligence, and cybersecurity. We are committed to
-              staying at the forefront of technological advancements, ensuring
-              our solutions are not only current but also scalable and
-              future-proof. By fostering close partnerships with our clients, we
-              ensure their vision is realized with precision and excellence,
-              ultimately leading to enhanced operational performance and
-              competitive advantage in their respective markets
-            </p>
-
-            <p id="more-content" class="collapse">
-              Our mission is to empower businesses through cutting-edge
-              technology solutions that foster innovation and efficiency. We
-              understand that in today's rapidly evolving digital landscape,
-              staying ahead requires more than just off-the-shelf software.
-              That's why we offer bespoke development services that are
-              meticulously crafted to address the specific challenges and
-              objectives of each client.
-            </p>
-            <button class="primary-button" onclick="toggleContent()">
-              Learn More
-            </button>
+        <!-- Who We Are -->
+        <div class="who-are-we">
+          <div class="row mb-5">
+            <div class="col-md-7">
+              <h2 class="text-left">About 360lution Pvt.Ltd.</h2>
+              <p style="line-height: 2.2">
+                At
+                <span style="color: #0151a7"
+                  ><strong>360lution Pvt. Ltd.</strong></span
+                >, we are dedicated to delivering innovative, customized
+                software solutions that drive business growth and efficiency.
+                Our team of experienced developers, designers, and project
+                managers specializes in creating robust applications tailored to
+                meet the unique needs of our clients across various industries.
+                Our comprehensive range of services includes web and mobile app
+                development, cloud computing, artificial intelligence, and
+                cybersecurity.
+              </p>
+            </div>
+            <div class="col-md-5">
+              <img
+                src="images/image48.jpg"
+                alt="Team Collaboration"
+                class="img-fluid rounded my-4"
+              />
+            </div>
+            <div class="col-md-12">
+              <p style="text-align: justify">
+                At
+                <span style="color: #0151a7"
+                  ><strong>360lution Pvt. Ltd.</strong></span
+                >
+                Development Company, we pride ourselves on delivering innovative
+                and customized software solutions that drive business growth and
+                efficiency. With a team of experienced developers, designers,
+                and project managers, we specialize in creating robust
+                applications tailored to meet the unique needs of our clients
+                across various industries.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
+    <section class="package-card-section">
+      <div class="container">
+          <h2>Our Packages</h2>
+          <div class="card-container">
+              <a href="landing-page.html" class="card">
+                  <div class="card-image" style="background-image: url('images/image17.png');"></div>
+                  <div class="card-content">
+                      <h3><strong>Landing Page</strong></h3>
+                      <p>A concise and captivating introduction to your website.</p>
+                  </div>
+              </a>
+              <a href="static-website.html" class="card">
+                  <div class="card-image" style="background-image: url('images/image14.jpg');"></div>
+                  <div class="card-content">
+                      <h3><strong>Static Website</strong></h3>
+                      <p>Simple, reliable, and fast websites with fixed content.</p>
+                  </div>
+              </a>
+              <a href="dynamic-website.html" class="card">
+                  <div class="card-image" style="background-image: url('images/image16.jpeg');"></div>
+                  <div class="card-content">
+                      <h3><strong>Dynamic Website</strong></h3>
+                      <p>Interactive and flexible websites with dynamic content.</p>
+                  </div>
+              </a>
+              <a href="ecommerce-website.html" class="card">
+                  <div class="card-image" style="background-image: url('images/image15.jpg');"></div>
+                  <div class="card-content">
+                      <h3><strong>E-commerce Website</strong></h3>
+                      <p>Comprehensive online stores for your business.</p>
+                  </div>
+              </a>
+              <a href="custom-website.html" class="card">
+                  <div class="card-image" style="background-image: url('images/image13.png');"></div>
+                  <div class="card-content">
+                      <h3><strong>Custom Website</strong></h3>
+                      <p>Tailor-made solutions for your unique needs.</p>
+                  </div>
+              </a>
+          </div>
+      </div>
+  </section>
 
     <!-- Why Choose Us section -->
     <div class="why-choose">
@@ -445,126 +448,150 @@
     </div>
 
     <!-- Portfolio slider Section -->
-     
+
     <section class="portfolio-slider-section">
-        <div class="container">
-            <h2>Our Portfolio</h2>
-          <div class="portfolio-container">
-            <div class="swiper-container mySwiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img src="./images/hero-image1.jpg" alt="Image 1" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./images/hero-image2.jpg" alt="Image 2" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./images/hero-image3.jpg" alt="Image 3" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./images/hero-image4.jpg" alt="Image 4" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./images/image25.jpeg" alt="Image 5" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./images/image26.jpeg" alt="Image 6" />
+      <div class="container">
+        <h2>Our Portfolio</h2>
+        <div class="portfolio-container">
+          <div class="swiper-container mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="images/hero-image3.webp" alt="Image 1" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/hero-image3.webp" alt="Image 2" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/hero-image3.webp" alt="Image 3" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/hero-image3.webp" alt="Image 4" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/image25.jpeg" alt="Image 5" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/image26.jpeg" alt="Image 6" />
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial-section">
+      <div class="container">
+        <h2 class="text-white">Testimonials</h2>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <img
+                  src="images/hero-image3.webp"
+                  alt="Profile Image"
+                  class="profile-image"
+                />
+                <h4>John Doe</h4>
+                <p>
+                  "This product has exceeded my expectations. The design is
+                  modern and sleek, and the quality is top-notch. I highly
+                  recommend it to anyone looking for a great solution."
+                </p>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
                 </div>
               </div>
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-pagination"></div>
             </div>
-          </div>
-        </div>
-      </section>
-  
-<!-- Testimonial Section -->
-<section class="testimonial-section">
-  <div class="container">
-    <h2 class="text-white">Testimonials</h2>
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="testimonial-card">
-            <img src="images/hero-image3.webp" alt="Profile Image" class="profile-image">
-            <h4>John Doe</h4>
-            <p>"This product has exceeded my expectations. The design is modern and sleek, and the quality is top-notch. I highly recommend it to anyone looking for a great solution."</p>
-            <div class="rating">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <img
+                  src="images/hero-image2.webp"
+                  alt="Profile Image"
+                  class="profile-image"
+                />
+                <h4>Jane Smith</h4>
+                <p>
+                  "I was hesitant at first, but I'm so glad I gave this product
+                  a try. It's made my life so much easier, and I'm impressed
+                  with the level of customer service. Highly recommend!"
+                </p>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="testimonial-card">
-            <img src="images/hero-image2.webp" alt="Profile Image" class="profile-image">
-            <h4>Jane Smith</h4>
-            <p>"I was hesitant at first, but I'm so glad I gave this product a try. It's made my life so much easier, and I'm impressed with the level of customer service. Highly recommend!"</p>
-            <div class="rating">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="testimonial-card">
-            <img src="images/hero-image1.webp" alt="Profile Image" class="profile-image">
-            <h4>Michael Johnson</h4>
-            <p>"This is the best product I've ever used. The features are incredible, and the user experience is top-notch. I can't recommend it enough to anyone looking for a reliable and innovative solution."</p>
-            <div class="rating">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <img
+                  src="images/hero-image1.webp"
+                  alt="Profile Image"
+                  class="profile-image"
+                />
+                <h4>Michael Johnson</h4>
+                <p>
+                  "This is the best product I've ever used. The features are
+                  incredible, and the user experience is top-notch. I can't
+                  recommend it enough to anyone looking for a reliable and
+                  innovative solution."
+                </p>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section class="client-logo-section">
-  <div class="container my-5">
-    <h2>Our Clients</h2>
-    <div class="logo-swiper">
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="images/logos/logo (1).png" alt="Client Logo 1">
+    <section class="client-logo-section">
+      <div class="container my-5">
+        <h2>Our Clients</h2>
+        <div class="logo-swiper">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="images/logos/logo (1).png" alt="Client Logo 1" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/logos/logo (10).png" alt="Client Logo 2" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/logos/logo (11).png" alt="Client Logo 3" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/logos/logo (12).png" alt="Client Logo 4" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/logos/logo (13).png" alt="Client Logo 5" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/logos/logo (12).png" alt="Client Logo 4" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/logos/logo (21).png" alt="Client Logo 5" />
+              </div>
+            </div>
           </div>
-          <div class="swiper-slide">
-            <img src="images/logos/logo (10).png" alt="Client Logo 2">
-          </div>
-          <div class="swiper-slide">
-            <img src="images/logos/logo (11).png" alt="Client Logo 3">
-          </div>
-          <div class="swiper-slide">
-            <img src="images/logos/logo (12).png" alt="Client Logo 4">
-          </div>
-          <div class="swiper-slide">
-            <img src="images/logos/logo (13).png" alt="Client Logo 5">
-          </div>
-          <div class="swiper-slide">
-            <img src="images/logos/logo (12).png" alt="Client Logo 4">
-          </div>
-          <div class="swiper-slide">
-            <img src="images/logos/logo (21).png" alt="Client Logo 5">
-          </div>
-         
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- FAQ's Section -->
     <section class="faq-section">
@@ -673,18 +700,36 @@
                 class="accordion-collapse collapse"
                 data-bs-parent="#accordionExample"
               >
-              <div class="accordion-body">
-                The main features of 360Lution include:<br>
+                <div class="accordion-body">
+                  The main features of 360Lution include:<br />
 
-                 <ul>
-                    <li><strong>Comprehensive Dashboard:</strong> Provides an overview of all critical business metrics.</li>
-                    <li><strong>Customer Relationship Management (CRM):</strong> Manages interactions with current and potential customers.</li>
-                    <li><strong>Financial Management:</strong> Offers tools for budgeting, invoicing, and financial reporting.</li>
-                    <li><strong>Human Resources Management (HRM):</strong> Manages employee records, payroll, and performance</li>
-                    <li><strong>Project Management:</strong> Tracks project progress, deadlines, and resource allocation.</li>
-                    <li><strong>Inventory Management: </strong>Monitors stock levels, orders, and supply chain logistics.</li>
-                 </ul>
-                  </div>
+                  <ul>
+                    <li>
+                      <strong>Comprehensive Dashboard:</strong> Provides an
+                      overview of all critical business metrics.
+                    </li>
+                    <li>
+                      <strong>Customer Relationship Management (CRM):</strong>
+                      Manages interactions with current and potential customers.
+                    </li>
+                    <li>
+                      <strong>Financial Management:</strong> Offers tools for
+                      budgeting, invoicing, and financial reporting.
+                    </li>
+                    <li>
+                      <strong>Human Resources Management (HRM):</strong> Manages
+                      employee records, payroll, and performance
+                    </li>
+                    <li>
+                      <strong>Project Management:</strong> Tracks project
+                      progress, deadlines, and resource allocation.
+                    </li>
+                    <li>
+                      <strong>Inventory Management: </strong>Monitors stock
+                      levels, orders, and supply chain logistics.
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -692,50 +737,151 @@
       </div>
     </section>
 
-    <script src="bootstrap.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
-    <script>
-      // JavaScript to show the button when scrolling
-      window.addEventListener("scroll", function () {
-        var button = document.getElementById("whatsappButton");
-        if (window.scrollY > 100) {
-          button.classList.add("show-button");
-        } else {
-          button.classList.remove("show-button");
-        }
-      });
+    <div class="contact-form-section contact-us pb-5">
 
-        //Portfolio Swipper
-      var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      breakpoints: {
-        
-        768: {
-          slidesPerView: 3,
-          spaceBetween: 30,
-        },
-      },
-    });
-    </script>
+        <div class="container pb-5">
+            <div class="row">
+              <div class="col-md-6 content" style="align-items: start;">
+                <h2 style="text-align: left;">Feel Free to Contact Us</h2>
+                <p style="text-align: left;"><strong><span>Address:</span></strong> Near Aacharya Narendra Dev Inter College, Lahasari Market, Gorakhpur, Uttar Pradesh, India, 273016</p>
+                <p style="text-align: left;"><strong><span>Phone:</span></strong> +91 9151533360</p>
+                <p style="text-align: left;"><strong><span>Email:</span></strong> <strong><a href="mailto:contact@360lution.com">contact@360lution.com</a></strong></p>
+                
+              </div>
+              <div class="col-md-6">
+                <div class="form-container">
+                  <h4>
+                    <span>Get in Touch</span>
+                  </h4>
+                  <form>
+                    <div class="form-row row">
+                      <div class="form-group col-md-6">
+                        <label for="name">Your Name</label>
+                        <i class="fa fa-user"></i>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="name"
+                          placeholder="Your Name"
+                          required
+                        />
+                      </div>
+                      
+                      <div class="form-group col-md-6">
+                        <label for="mobile">Mobile No.</label>
+                        <i class="fa fa-phone"></i>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="mobile"
+                          placeholder="Mobile Number"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="form-row row">
+                      <div class="form-group col-md-12">
+                        <label for="email">Email</label>
+                        <i class="fa fa-envelope"></i>
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="email"
+                          placeholder="Your Email"
+                          required
+                        />
+                      </div>
+                      
+                    </div>
+                    
+                    
+                    <div class="row">
+                      <div class="form-group">
+                        <label for="message"
+                          >Message</label
+                        >
+                        <i class="fa fa-comment" style="top: 45%"></i>
+                        <textarea
+                          class="form-control"
+                          id="message"
+                          rows="4"
+                          placeholder="Write your message"
+                          required
+                        ></textarea>
+                      </div>
+                    </div>
+                    <button type="submit" class="primary-button">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
 
-<script>
-    
-  </script>
 
+    <footer class="footer-section">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+              <div class="footer-logo">
+                <img src="images/logo.png" alt="Company Logo" class="img-fluid mb-3">
+                <p style="line-height: 1.7;">360lution Pvt. Ltd. is a fast-growing IT Company that provides holistic IT solutions to businesses across geographies We offer IT expertise in software, website, and application (iOS & Android) development; UI/UX design; and digital marketing.</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+              <h4>Services</h4>
+              <ul class="list-unstyled">
+                <li><a href="#">Web Designing</a></li>
+                <li><a href="#">Software Development</a></li>
+                <li><a href="#">App Development</a></li>
+                <li><a href="#">SEO Optimization</a></li>
+                <li><a href="#">Digital Marketing</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+              <h4>Information</h4>
+              <ul class="list-unstyled">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+              <h4>Contact</h4>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-map-marker-alt"></i>Near aacharya Narendra dev inter College, Lahasari market gorakhpur, Uttar Pradesh, India, 273016</li>
+                <li><i class="fas fa-phone"></i> +91 9151533360</li>
+                <li><i class="fas fa-envelope"></i> contact@360lution.com</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+              <p class="mb-0">&copy; 2024 Your Company Name. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+              <ul class="social-icons list-inline mb-0">
+                <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="bootstrap.js" defer></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+    <script src="script.js" defer></script>
   </body>
 </html>

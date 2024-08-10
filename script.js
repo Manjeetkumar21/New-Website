@@ -61,85 +61,70 @@ let testimonialSwiper = new Swiper('.testimonial-section .swiper-container', {
     },
   });
 
-// // Hero Section Slider
-// document.addEventListener('DOMContentLoaded', function() {
-//     setTimeout(function() {
-//         try {
-//             var intervalTime = 5000;
-//             var carousel = document.getElementById('heroCarousel');
-//             var bsCarousel = new bootstrap.Carousel(carousel, {
-//                 interval: intervalTime
-//             });
+  // JavaScript to show the button when scrolling
+  window.addEventListener("scroll", function () {
+    var button = document.getElementById("whatsappButton");
+    if (window.scrollY > 100) {
+      button.classList.add("show-button");
+    } else {
+      button.classList.remove("show-button");
+    }
+  });
 
-//             function startProgressBar() {
-//                 var activeIndicator = document.querySelector('.carousel-indicators .active');
-//                 if (activeIndicator) {
-//                     activeIndicator.style.setProperty('--progress', '0');
-//                     setTimeout(() => {
-//                         activeIndicator.style.setProperty('--progress', '100%');
-//                     }, 10);
-//                 }
-//             }
+  //Portfolio Swipper
+  var PortfolioSwiper = new Swiper(".portfolio-container .mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    },
+  });
 
-//             function resetProgressBars() {
-//                 document.querySelectorAll('.carousel-indicators button').forEach(function(indicator) {
-//                     indicator.style.setProperty('--progress', '0');
-//                 });
-//             }
 
-//             function handleCarouselSlide() {
-//                 resetProgressBars();
-//                 setTimeout(startProgressBar, 10);
-//             }
+  document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('.header');
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const closeMenu = document.querySelector('.close-menu');
+    const navbarNav = document.querySelector('#navbarNav');
+    const dropdowns = document.querySelectorAll('.dropdown');
 
-//             function handleHighlight(currentSlide, prevSlide) {
-//                 if (prevSlide) {
-//                     var prevHighlight = prevSlide.querySelector('.highlight');
-//                     if (prevHighlight) prevHighlight.classList.add('exit');
-//                 }
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
 
-//                 var currentHighlight = currentSlide.querySelector('.highlight');
-//                 if (currentHighlight) {
-//                     currentHighlight.classList.remove('active', 'exit');
-//                     setTimeout(function() {
-//                         currentHighlight.classList.add('active');
-//                     }, 10);
-//                 }
-//             }
+    navbarToggler.addEventListener('click', function() {
+        navbarNav.classList.add('show');
+    });
 
-//             carousel.addEventListener('slide.bs.carousel', function (event) {
-//                 resetProgressBars();
-//                 handleHighlight(event.relatedTarget, carousel.querySelector('.carousel-item.active'));
-//             });
+    closeMenu.addEventListener('click', function() {
+        navbarNav.classList.remove('show');
+    });
 
-//             carousel.addEventListener('slid.bs.carousel', function () {
-//                 handleCarouselSlide();
-//             });
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!navbarNav.contains(event.target) && !navbarToggler.contains(event.target)) {
+            navbarNav.classList.remove('show');
+        }
+    });
 
-//             // Initially activate the highlight on the first slide and start progress bar
-//             var firstHighlight = carousel.querySelector('.carousel-item.active .highlight');
-//             if (firstHighlight) firstHighlight.classList.add('active');
-//             startProgressBar();
-
-//             // Handle visibility changes
-//             document.addEventListener('visibilitychange', function() {
-//                 if (document.hidden) {
-//                     bsCarousel.pause();
-//                     resetProgressBars();
-//                 } else {
-//                     bsCarousel.cycle();
-//                     handleCarouselSlide();
-//                 }
-//             });
-
-//             console.log('Carousel initialized successfully');
-//         } catch (error) {
-//             console.error('Error initializing carousel:', error);
-//         }
-//     }, 100);  // Small delay to ensure Bootstrap is initialized
-// });
-
-function toggleContent() {
-    const moreContent = document.getElementById('more-content');
-    moreContent.classList.toggle('show');
-}
+});

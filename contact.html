@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+   <!-- Navbar -->
+   <nav class="navbar sticky-top navbar-expand-lg" style="background-color: #e3f2fd;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+          <li class="nav-item dropdown ms-2">
+            <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="websiteDevelopment.html">Website Development</a></li>
+              <li><a class="dropdown-item" href="app-design.html">Application Design</a></li>
+              <li><a class="dropdown-item" href="software-dev.html">Software Development</a></li>
+              <li><a class="dropdown-item" href="ui-ux.html">Website Development</a></li>
+              <li><a class="dropdown-item" href="seo.html">Application Design</a></li>
+              <li><a class="dropdown-item" href="social-media-marketing.html">Social Media Marketing</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown ms-2">
+            <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              Packages
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="landing.html">Landing Page</a></li>
+              <li><a class="dropdown-item" href="eCommerce.html">E-commerce</a></li>
+              <li><a class="dropdown-item" href="CustomWeb.html">Custome Website</a></li>
+              <li><a class="dropdown-item" href="Static.html">Static Website</a></li>
+              <li><a class="dropdown-item" href="dynamic.html">Dynamic Website</a></li>
+              
+            </ul>
+          </li>
+          a class="nav-link" href="portfolio.html">Portfolio</a>
+            <a class="nav-link" href="aboutus.html">About Us</a>
+            <a class="nav-link" href="career.html">Career</a>
+            <a class="nav-link" href="contact_us.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+    <div class="contact-form-section jumbotron">
+        <div class="container">
+            <div class="row">
+              <div class="col-md-6 content">
+                <h2>Feel Free to Contact Us</h2>
+                <p>
+                  If you're looking for a partner who can help you navigate the
+                  digital landscape and achieve tangible results, look no further.
+                </p>
+                <img
+                  src="images/image34.png"
+                  alt="Clients"
+                  class="img-fluid mb-4"
+                />
+              </div>
+              <div class="col-md-6">
+                <div class="form-container">
+                  <h4>
+                    <span>Please provide the requested details in the form</span>
+                  </h4>
+                  <form>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="name">Your Name</label>
+                        <i class="fa fa-user"></i>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="name"
+                          placeholder="Your Name"
+                          required
+                        />
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="email">Email</label>
+                        <i class="fa fa-envelope"></i>
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="email"
+                          placeholder="Your Email"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="mobile">Mobile No.</label>
+                        <i class="fa fa-phone"></i>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="mobile"
+                          placeholder="Mobile Number"
+                          required
+                        />
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="city">City</label>
+                        <i class="fa fa-city"></i>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="city"
+                          placeholder="City"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="service">Service</label>
+                      <i class="fa fa-briefcase"></i>
+                      <select class="form-control" id="service" required>
+                        <option value="" disabled >- Select Service -</option>
+                        <option value="static-website">Static Website</option>
+                        <option value="e-commerce-website">
+                          E-Commerce Website
+                        </option>
+                        <option value="digital-marketing">Digital Marketing</option>
+                      </select>
+                    </div>
+                    <div class="form-group d-none" id="business-type-group">
+                      <label for="business-type">Business Type</label>
+                      <i class="fa fa-building"></i>
+                      <select class="form-control" id="business-type">
+                        <option value="startup">Startup Business</option>
+                        <option value="small-business">Small Business</option>
+                      </select>
+                    </div>
+                    <div class="form-group d-none" id="marketing-type-group">
+                      <label for="marketing-type">Marketing Type</label>
+                      <i class="fa fa-bullhorn"></i>
+                      <select class="form-control" id="marketing-type">
+                        <option value="organic">Organic Marketing</option>
+                        <option value="inorganic">Inorganic Marketing</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="message"
+                        >Anything else you want to inform us?</label
+                      >
+                      <i class="fa fa-comment" style="top: 45%"></i>
+                      <textarea
+                        class="form-control"
+                        id="message"
+                        rows="3"
+                        placeholder="Please type at least 20 characters about your inquiry"
+                        required
+                      ></textarea>
+                    </div>
+                    <button type="submit" class="primary-button">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <footer class="footer-section">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+              <div class="footer-logo">
+                <img src="images/logo.png" alt="Company Logo" class="img-fluid mb-3">
+                <p style="line-height: 1.7;">360lution Pvt. Ltd. is a fast-growing IT Company that provides holistic IT solutions to businesses across geographies We offer IT expertise in software, website, and application (iOS & Android) development; UI/UX design; and digital marketing.</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+              <h4>Services</h4>
+              <ul class="list-unstyled">
+                <li><a href="#">Web Designing</a></li>
+                <li><a href="#">Software Development</a></li>
+                <li><a href="#">App Development</a></li>
+                <li><a href="#">SEO Optimization</a></li>
+                <li><a href="#">Digital Marketing</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+              <h4>Information</h4>
+              <ul class="list-unstyled">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+              <h4>Contact</h4>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-map-marker-alt"></i>Near aacharya Narendra dev inter College, Lahasari market gorakhpur, Uttar Pradesh, India, 273016</li>
+                <li><i class="fas fa-phone"></i> +91 9151533360</li>
+                <li><i class="fas fa-envelope"></i> contact@360lution.com</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+              <p class="mb-0">&copy; 2024 360lution Pvt. Ltd.. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+              <ul class="social-icons list-inline mb-0">
+                <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="bootstrap.js" defer></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+    <script src="script.js" defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        var serviceSelect = document.getElementById("service");
+        var businessTypeGroup = document.getElementById("business-type-group");
+        var marketingTypeGroup = document.getElementById(
+          "marketing-type-group"
+        );
+
+        serviceSelect.addEventListener("change", function () {
+          var selectedService = serviceSelect.value;
+          businessTypeGroup.classList.add("d-none");
+          marketingTypeGroup.classList.add("d-none");
+
+          if (selectedService === "static-website") {
+            businessTypeGroup.classList.remove("d-none");
+          } else if (selectedService === "digital-marketing") {
+            marketingTypeGroup.classList.remove("d-none");
+          }
+        });
+      });
+    </script>
+</body>
+</html>
